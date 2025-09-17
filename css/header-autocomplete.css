@@ -1,0 +1,28 @@
+/* Контейнер под строкой поиска в шапке */
+.header .search { position: relative; } /* уже есть, но дублировать не страшно */
+
+.search-suggest {
+  position: absolute; left: 0; right: 0; top: 100%; margin-top: 8px;
+  background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.15); overflow: hidden; z-index: 5000;
+  display: none; /* по умолчанию скрыто */
+}
+
+.search-suggest.is-open { display: block; }
+.search-suggest__list { max-height: 320px; overflow: auto; }
+
+.search-suggest__item {
+  display: grid; grid-template-columns: 44px 1fr auto; gap: 10px;
+  align-items: center; padding: 10px 12px; cursor: pointer;
+}
+.search-suggest__item:hover,
+.search-suggest__item.is-active { background: #f7f7f9; }
+
+.search-suggest__img {
+  width: 44px; height: 44px; object-fit: cover; border-radius: 8px; background:#f3f5f8;
+}
+.search-suggest__title { font-size: 14px; font-weight: 600; line-height: 1.2; }
+.search-suggest__meta  { font-size: 12px; color:#667085; }
+.search-suggest__price { font-weight: 700; white-space: nowrap; font-size: 14px; }
+
+.search-suggest__empty { padding: 10px 12px; color:#667085; font-size: 14px; }

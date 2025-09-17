@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Автомир — Корзина</title>
+
+  <!-- относительные пути (без ведущего /) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header-footer.css">
+  <link rel="stylesheet" href="css/cart.page.css">
+</head>
+<body>
+  <!-- HEADER (как на главной) --> 
+  <header class="header">
+    <div class="container header_row">
+      <a class="logo" href="index.html">
+        <img src="images/logo.png" alt="Логотип Автомир">
+      </a>
+      <nav class="nav">
+        <a class="nav_link" href="index.html">Главная</a>
+        <a class="nav_link" href="products.html" aria-current="page">Товары</a>
+        <a class="nav_link" href="about.html">О магазине</a>
+        <a class="nav_link" href="contact.html">Связаться</a>
+      </nav>
+      <div class="header_actions">
+        <button class="icon_btn" type="button" aria-label="Открыть корзину">🛒</button>
+      </div>
+    </div>
+  </header>
+        <section class="contact">
+          <div class="container">
+            <h1>Связаться</h1>
+
+                  <div class="contact-grid">
+        <!-- Левая колонка: инфо -->
+        <div class="card glass contact-info">
+          <h3>Контакты</h3>
+          <ul class="contact-list">
+            <li><span>Телефон:</span> <a href="tel:+7(927) 123 24 12">+7(927) 123 24 12</a></li>
+            <li><span>E-mail:</span> <a href="mailto:auto_mir30@mail.ru">auto_mir30@mail.ru</a></li>
+            <li><span>Адрес:</span> г. Астрахань, ул. Бориса Алексеева, 49д.</li>
+            <li><span>Время работы:</span> Пн–Сб 8:00–19:00, Вс 9:00–18:00</li>
+          </ul>
+
+          <div class="map glass">
+            <!-- Подставь свои координаты, если знаешь -->
+            <iframe
+              title="Карта"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=46.3610799,%2048.072532&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" frameborder="0" scrolling="no" style="width: 550px; height: 300px;">
+            </iframe>
+            <a class="map-link" target="_blank" rel="noopener"
+               href="https://www.google.com/maps/search/?api=1&query=Астрахань">
+              Открыть в Google Картах
+            </a>
+          </div>
+        </div>
+
+        <!-- Правая колонка: форма -->
+        <div class="card glass contact-form">
+          <h3>Напишите нам</h3>
+          <form id="contactForm" novalidate>
+            <label>
+              Имя
+              <input type="text" name="name" placeholder="Ваше имя" required />
+            </label>
+            <label>
+              Телефон
+              <input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required />
+            </label>
+            <label>
+              Сообщение
+              <textarea name="message" rows="5" placeholder="Коротко опишите вопрос" required></textarea>
+            </label>
+            <div class="form-row">
+              <label class="agree">
+                <input type="checkbox" name="agree" required />
+                Согласен с обработкой персональных данных
+              </label>
+              <button type="submit" class="btn-dark">Отправить</button>
+            </div>
+            <p class="form-note">Мы ответим в рабочее время в течение дня.</p>
+            <div class="form-toast" id="formToast" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+                        
+            <!--Футер-->
+        <footer class="footer">
+            <div class="footer_top">
+            <div class="container footer_row">
+                <div class="footer_brand">
+                <div class="logo">A</div>
+                <p>«Автомир» — магазин авто-жидкостей. Астрахань, ул. Бориса Алексеева, 49д.</p>
+            </div>
+
+            <div class="footer_col">
+                <h4>Навигация</h4>
+                <nav class="footer_list">
+                    <a href="index.html">Главная</a>
+                    <a href="products.html">Товары</a>
+                    <a href="about.html">О магазине</a>
+                    <a href="contact.html">Связаться</a>
+                </nav>
+            </div>
+
+            <div class="footer_col">
+                <h4>Контакты</h4>
+                <div class="footer_list">
+                    <a href="tel: +7(927) 123 24 12">+7(927) 123 24 12</a>
+                    <a href="mailto:auto_mir30@mail.ru">auto_mir30@mail.ru</a>
+                    <span>ИНН/КПП: 3015103117 / 301501001</span>
+                </div>
+            </div>
+
+                <div class="footer_col">
+                <h4>Мы в соц. сетях</h4>
+                <div class="footer_social">
+                    <a class="icon icon--tg" href="https://t.me/avtomir_shop" target="_blank" rel="noopener">
+                    <span class="visually-hidden">Telegram</span>
+                    <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a class="icon icon--vk" href="https://vk.com/avtomir_shop" target="_blank" rel="noopener">
+                    <span class="visually-hidden">VK</span>
+                    <i class="fa-brands fa-vk"></i>
+                    </a>
+                    <a class="icon icon--wa" href="https://wa.me/79271232412?text=Здравствуйте!%20Хочу%20заказать%20масло" target="_blank" rel="noopener">
+                    <span class="visually-hidden">WhatsApp</span>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+                </div>
+                </div> <!-- /.footer_row -->
+                </div> <!-- /.footer_top -->
+
+                <div class="footer_bottom">
+                <div class="container footer_bottom_row">
+                    <span>© 2025 «Автомир». Все права защищены.</span>
+                    <a href="#" class="privacy">Политика конфиденциальности</a>
+                </div>
+                </div>
+            </footer>
+
+                                    <!--Мини корзина товаров-->
+            <div id="miniCart" class="cart" aria-hidden="true" hidden>
+          <div class="cart__backdrop" data-cart-close></div>
+          <aside class="cart__panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+            <header class="cart__header">
+              <h2 id="cartTitle">Корзина</h2>
+              <button class="cart__close" aria-label="Закрыть" data-cart-close>×</button>
+            </header>
+
+            <div class="cart__list" id="cartList"></div>
+
+            <footer class="cart__footer">
+              <div class="cart__total"><span>Итого:</span><strong id="cartTotal"></strong></div>
+              <div class="cart__actions">
+                <button id="cartClear" class="btn btn-secondary" type="button">Очистить</button>
+                <a href="cart.html" class="btn btn-primary">Оформить</a>
+              </div>
+            </footer>
+          </aside>
+        </div>
+
+
+
+  <script src="script.js" defer></script>
+  <script src="data/products.data.js" defer></script>
+  <script src="js/cart.js" defer></script>
+  <script src="js/products.page.js" defer></script>
+  </body>
+</html>

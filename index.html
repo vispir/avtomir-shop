@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомир - интернет-магазин</title>
+    
+
+    <!-- Подключение шрифта и CSS файлов -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/header-autocomplete.css">
+
+</head>
+<body>
+    <!--Шапка-->
+    <header class="header">
+        <div class="container header_row">
+            <a class="logo" href="index.html">
+                <img src="images/logo.png" alt="Логотип Автомир">
+            </a>
+            <nav class="nav">
+                <a class="nav_link" href="index.html">Главная</a>
+                <a class="nav_link" href="products.html">Товары</a>
+                <a class="nav_link" href="about.html">О магазине</a>
+                <a class="nav_link" href="contact.html">Связаться</a>
+            </nav>
+        <div class="header_actions">
+            <form class="search">
+                  <label for="search" class="visually-hidden">Найти товар</label>
+                  <input class="search_input" id="search" name="q" type="search" placeholder="Поиск">
+                    </form>
+                    <button class="icon_btn" type="button" aria-label="Открыть корзину">🛒</button>
+                    </div>
+        </div>
+        </header>
+
+                <!--Секция о магазине-->
+                <section class="hero" id="about">
+                <div class="container">
+                    <div class="glass hero_card">
+                    <h2>О магазине</h2>
+                    <p>
+                        Мы специализируемся на продаже масел, автохимии и технических жидкостей.
+                        Магазин «Автомир» работает в г. Астрахань и предлагает проверенные товары для вашего автомобиля.
+                    </p>
+                    <a href="about.html" class="btn-dark">Подробнее</a>
+                    </div>
+                </div>
+                </section>
+
+            
+        <!--Секция слайдера + адрес-->
+        <section class="info">
+            <div class="container info_row">
+                <div class="info-text">
+                    <h3>«АВТОМИР» — магазин авто-жидкостей</h3>
+                    <p>г. Астрахань, ул. Бориса Алексеева, 49д</p>
+                    <p>ИНН/КПП: 3015103117 / 301501001</p>
+                </div>
+            <div class="slider">
+                <img class="slider_img is-active" src="images/store-1.jpg" alt="Фасад магазина">
+                <img class="slider_img"           src="images/store-2.jpg" alt="Фасад магазина_2">
+                <button class="icon_btn slider_arrow slider_arrow--next" type="button" aria-label="Следующий слайд">➡</button>
+                <button class="icon_btn slider_arrow slider_arrow--left" type="button" aria-label="Предыдущий слайд">⬅</button>
+            </div>
+        </div>
+        </section>
+
+        <!--Секция товары-->
+        <section class="products products_carousel">
+            <div class="container">
+                <div class="products_head">
+                    <div class="products_title">Новинки:</div>
+                </div>
+            
+            <div class="products_viewport">  
+                <div class="products_track" id="productsTrack">
+
+                    <!--Первая карточка товара-->
+                <article class="product-card">
+                    <div class="card-media">
+                        <img src="images/oil.png" alt="ZIC Top Motor Oil 5W-30, 4L">
+                        <div class="media-title">ZIC Top Motor Oil 5W-30, 4L</div>
+                        <div class="media-cta">Приобретите сейчас!</div>
+                        </div>
+                        <div class="card-meta"><div class="price">₽ 3300</div></div>
+                        <div class="card-body"><p class="excerpt">— полностью синтетическое моторное масло для бензиновых и дизельных двигателей.</p></div>
+                        <div class="card-foot"><a class="btn-go" href="products.html"><span>Перейти к товарам</span><span aria-hidden="true">→</span></a></div>
+                    </article>
+
+                    <!--Вторая карточка товара-->
+                <article class="product-card">
+                    <div class="card-media">
+                        <img src="images/oil2.png" alt="ZIC GFT 75W-90, 4L">
+                        <div class="media-title">ZIC GFT 75W-90, 4L</div>
+                        <div class="media-cta">Приобретите сейчас!</div>
+                        </div>
+                        <div class="card-meta"><div class="price">₽ 3250</div></div>
+                        <div class="card-body"><p class="excerpt">— полностью синтетическое трансмиссионное масло для механических трансмиссий легковых автомобилей.</p></div>
+                        <div class="card-foot"><a class="btn-go" href="products.html"><span>Перейти к товарам</span><span aria-hidden="true">→</span></a></div>
+                    </article>
+
+                    <!--Третья карточка товара-->
+                <article class="product-card">
+                    <div class="card-media">
+                        <img src="images/oil3.png" alt="ZIC X5 Diesel 10W-40, 6L">
+                        <div class="media-title">ZIC X5 Diesel 10W-40, 6L</div>
+                        <div class="media-cta">Приобретите сейчас!</div>
+                        </div>
+                        <div class="card-meta"><div class="price">₽ 4500</div></div>
+                        <div class="card-body"><p class="excerpt">— полусинтетическое масло для дизельных двигателей легковых автомобилей.</p></div>
+                        <div class="card-foot"><a class="btn-go" href="products.html"><span>Перейти к товарам</span><span aria-hidden="true">→</span></a></div>
+                    </article>                    
+
+                    <!--Четвертая карточка товара-->
+                <article class="product-card">
+                    <div class="card-media">
+                        <img src="images/oil4.png" alt="ZIC X7 DIESEL 10W-40, 6L">
+                        <div class="media-title">ZIC X7 DIESEL 10W-40, 6L</div>
+                        <div class="media-cta">Приобретите сейчас!</div>
+                        </div>
+                        <div class="card-meta"><div class="price">₽ 4200</div></div>
+                        <div class="card-body"><p class="excerpt">— трансмиссионное масло для механических коробок передач.</p></div>
+                        <div class="card-foot"><a class="btn-go" href="products.html"><span>Перейти к товарам</span><span aria-hidden="true">→</span></a></div>
+                    </article>
+                    
+                    <!--Пятая карточка товара-->
+                <article class="product-card">
+                    <div class="card-media">
+                        <img src="images/oil5.png" alt="Genesis Armortech FD 5W-30, 4L">
+                        <div class="media-title">Genesis Armortech FD 5W-30, 4L</div>
+                        <div class="media-cta">Приобретите сейчас!</div>
+                        </div>
+                        <div class="card-meta"><div class="price">₽ 3250</div></div>
+                        <div class="card-body"><p class="excerpt">— моторное масло «Лукойл» для современных бензиновых и дизельных двигателей легковых автомобилей.</p></div>
+                        <div class="card-foot"><a class="btn-go" href="products.html"><span>Перейти к товарам</span><span aria-hidden="true">→</span></a></div>
+                    </article>
+
+                    <!--Шестая карточка товара-->
+                <article class="product-card">
+                    <div class="card-media">
+                        <img src="images/oil6.png" alt="Super 5W-40, 1L">
+                        <div class="media-title">Super 5W-40, 1L</div>
+                        <div class="media-cta">Приобретите сейчас!</div>
+                        </div>
+                        <div class="card-meta"><div class="price">₽ 450</div></div>
+                        <div class="card-body"><p class="excerpt">— всесезонное масло для четырёхтактных бензиновых и дизельных двигателей легковых автомобилей.</p></div>
+                        <div class="card-foot"><a class="btn-go" href="products.html"><span>Перейти к товарам</span><span aria-hidden="true">→</span></a></div>
+                    </article>     
+                    
+                    <!--Седьмая карточка товара-->
+                <article class="product-card">
+                    <div class="card-media">
+                        <img src="images/oil7.png" alt="2T Лукойл Мото, 1L">
+                        <div class="media-title">2T Лукойл Мото, 1L</div>
+                        <div class="media-cta">Приобретите сейчас!</div>
+                        </div>
+                        <div class="card-meta"><div class="price">₽ 420</div></div>
+                        <div class="card-body"><p class="excerpt">— высококачественное минеральное масло для использования в двухтактных бензиновых двигателях мотоциклов.</p></div>
+                        <div class="card-foot"><a class="btn-go" href="products.html"><span>Перейти к товарам</span><span aria-hidden="true">→</span></a></div>
+                    </article> 
+
+                    <!--Восьмая карточка товара-->
+                <article class="product-card">
+                    <div class="card-media">
+                        <img src="images/oil8.png" alt="Genesis Armortech 5W40 Diesel, 1L ">
+                        <div class="media-title">Genesis Armortech 5W40 Diesel, 1L </div>
+                        <div class="media-cta">Приобретите сейчас!</div>
+                        </div>
+                        <div class="card-meta"><div class="price">₽ 550</div></div>
+                        <div class="card-body"><p class="excerpt">— синтетическое моторное масло с пониженной сульфатной зольностью для дизельных двигателей.</p></div>
+                        <div class="card-foot"><a class="btn-go" href="products.html"><span>Перейти к товарам</span><span aria-hidden="true">→</span></a></div>
+                    </article> 
+            </div>
+            <div class="products_nav is-overlay">
+                <button id="prodPrev" class="round" aria-label="Назад">◀</button>
+                <button id="prodNext" class="round" aria-label="Вперёд">▶</button>
+            </div>
+        </div>
+        </div>
+        </section>
+    </main>
+
+        <!--Футер-->
+        <footer class="footer">
+            <div class="footer_top">
+            <div class="container footer_row">
+                <div class="footer_brand">
+                <div class="logo" href="index.html">A</div>
+                <p>«Автомир» — магазин авто-жидкостей. Астрахань, ул. Бориса Алексеева, 49д.</p>
+            </div>
+
+            <div class="footer_col">
+                <h4>Навигация</h4>
+                <nav class="footer_list">
+                    <a href="index.html">Главная</a>
+                    <a href="products.html">Товары</a>
+                    <a href="about.html">О магазине</a>
+                    <a href="contact.html">Связаться</a>
+                </nav>
+            </div>
+
+            <div class="footer_col">
+                <h4>Контакты</h4>
+                <div class="footer_list">
+                    <a href="tel: +7(927) 123 24 12">+7(927) 123 24 12</a>
+                    <a href="mailto:auto_mir30@mail.ru">auto_mir30@mail.ru</a>
+                    <span>ИНН/КПП: 3015103117 / 301501001</span>
+                </div>
+            </div>
+
+                <div class="footer_col">
+                <h4>Мы в соц. сетях</h4>
+                <div class="footer_social">
+                    <a class="icon icon--tg" href="https://t.me/avtomir_shop" target="_blank" rel="noopener">
+                    <span class="visually-hidden">Telegram</span>
+                    <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a class="icon icon--vk" href="https://vk.com/avtomir_shop" target="_blank" rel="noopener">
+                    <span class="visually-hidden">VK</span>
+                    <i class="fa-brands fa-vk"></i>
+                    </a>
+                    <a class="icon icon--wa" href="https://wa.me/79271232412?text=Здравствуйте!%20Хочу%20заказать%20масло" target="_blank" rel="noopener">
+                    <span class="visually-hidden">WhatsApp</span>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+                </div>
+                </div> <!-- /.footer_row -->
+                </div> <!-- /.footer_top -->
+
+                <div class="footer_bottom">
+                <div class="container footer_bottom_row">
+                    <span>© 2025 «Автомир». Все права защищены.</span>
+                    <a href="#" class="privacy">Политика конфиденциальности</a>
+                </div>
+                </div>
+            </footer>
+
+            <!--Мини корзина товаров-->
+            <div id="miniCart" class="cart" aria-hidden="true" hidden>
+        <div class="cart__backdrop" data-cart-close></div>
+        <aside class="cart__panel" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+            <header class="cart__header">
+            <h2 id="cartTitle">Корзина</h2>
+            <button class="cart__close" aria-label="Закрыть" data-cart-close>×</button>
+            </header>
+
+            <div class="cart__list" id="cartList"></div>
+
+            <footer class="cart__footer">
+            <div class="cart__total"><span>Итого:</span><strong id="cartTotal"></strong></div>
+            <div class="cart__actions">
+                <button id="cartClear" class="btn btn-secondary" type="button">Очистить</button>
+                <a href="cart.html" class="btn btn-primary">Оформить</a>
+            </div>
+            </footer>
+        </aside>
+        </div>
+
+            <!--Подключение JS-->
+    <script src="script.js"></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/products.page.js" defer></script>
+    <script src="data/products.data.js" defer></script>
+    <script src="js/header.search.js" defer></script>
+
+</body>
+    </html>

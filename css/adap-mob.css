@@ -1,0 +1,120 @@
+/* =========================================================
+   adap-mob.css — мобильные оверрайды
+   Подключать ПОСЛЕ всех остальных CSS
+   ========================================================= */
+
+/* Глобальные мелочи */
+html { -webkit-text-size-adjust: 100%; }
+*, *::before, *::after { box-sizing: border-box; }
+img, video { max-width: 100%; height: auto; display: block; }
+input, select, textarea { font-size: 16px; } /* чтобы iOS не зумил */
+
+/* ---------- HEADER ---------- */
+@media (max-width: 860px){
+  .header_row { gap: 12px; padding: 6px 0; }
+  .logo { width: 48px; height: 48px; }
+  .search { flex: 1; min-width: 0; }
+  .search_input { width: 100%; font-size: 16px; } /* перебиваем фикс. ширину */
+  .header_actions .icon_btn { width: 36px; height: 36px; }
+
+  /* Если пока без бургера — даём горизонтальный скролл меню */
+  .nav { 
+    overflow-x: auto; gap: 10px; 
+    -webkit-overflow-scrolling: touch; scrollbar-width: none;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+
+  /* Лейбл у мини-корзины можно скрыть на узких экранах */
+  .mini-cart__label { display: none; }
+}
+
+/* ---------- HERO / INFO ---------- */
+/* iOS не любит background-attachment: fixed — отключаем на мобилках */
+@media (max-width: 900px){
+  .hero { 
+    background-attachment: scroll; 
+    min-height: clamp(320px, 60vh, 520px);
+  }
+  .hero_card h2 { font-size: 22px; }
+  .hero_card p { font-size: 14px; }
+}
+
+/* Info-секция: из 2 колонок в одну */
+@media (max-width: 900px){
+  .info_row { grid-template-columns: 1fr; }
+}
+
+/* ---------- GRID КАРТОЧЕК (ГЛАВНАЯ) ---------- */
+@media (max-width: 768px){
+  .products_grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 480px){
+  .products_grid { grid-template-columns: 1fr; }
+  .products_title { padding: 8px 16px; }
+}
+
+/* ---------- СЛАЙДЕРЫ (универсально) ---------- */
+.slider, .product-slider { position: relative; overflow: hidden; }
+.slider__track { display: flex; transition: transform .3s ease; }
+.slider__slide { flex: 0 0 100%; }
+.slider__slide img { width: 100%; height: auto; object-fit: cover; }
+
+/* ---------- СТРАНИЦА "ТОВАРЫ" ---------- */
+/* Фильтры: всегда в колонку на мобиле, перебиваем жёсткие сетки */
+@media (max-width: 960px){
+  .filters { grid-template-columns: 1fr !important; }
+  .filters .filter-search,
+  .filters .volume,
+  .filters .price,
+  #resetFilters { grid-column: 1 / -1; width: 100%; }
+  .filters .price { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px){
+  .filters .price { grid-template-columns: 1fr; }
+}
+
+/* Сетка карточек на странице товаров */
+@media (max-width: 768px){
+  .products-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 480px){
+  .products-grid { grid-template-columns: 1fr; }
+}
+
+/* Модалка товара */
+@media (max-width: 768px){
+  .modal__body { grid-template-columns: 1fr; }
+  .modal__gallery img { height: 240px; }
+}
+
+/* ---------- СТРАНИЦА "СВЯЗАТЬСЯ" ---------- */
+@media (max-width: 960px){
+  .contact-grid { grid-template-columns: 1fr; gap: 16px; }
+  .form-row { flex-direction: column; align-items: stretch; gap: 10px; }
+  .btn, .btn-dark { min-height: 44px; width: 100%; }
+}
+/* Карта — белая карточка с чёрной обводкой */
+.map-card { 
+  background: #fff; border: 2px solid #111; border-radius: 14px; 
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+/* ---------- КОРЗИНА ---------- */
+@media (max-width: 640px){
+  /* было 80px 1fr auto auto — делаем компактнее */
+  .cart-page__item{
+    grid-template-columns: 64px 1fr auto;
+    gap: 10px;
+  }
+  .cart-page__qty{ justify-self: start; }
+  .cart-page__price{ justify-self: end; }
+  .cart-page__remove{ justify-self: end; }
+  .btn, .btn-primary, .btn-secondary{ min-height: 44px; }
+}
+
+/* ---------- ФУТЕР ---------- */
+@media (max-width: 992px){ .footer_row{ grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px){
+  .footer_row{ grid-template-columns: 1fr; }
+  .footer_bottom{ justify-content: center; text-align: center; }
+}

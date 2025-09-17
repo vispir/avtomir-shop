@@ -208,17 +208,3 @@
 .toast--info{ background: #2563eb; }    /* синий */
 
 
-/* ===== MOBILE FIX PACK (header-footer.css) ===== */
-
-/* Дублируем ключевые правки на случай другого порядка подключения */
-@media (max-width: 860px){
-  .search_input { width: 100%; font-size: 16px; }
-  .nav { overflow-x: auto; gap: 10px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-  .nav::-webkit-scrollbar { display: none; }
-}
-
-@media (max-width: 560px){
-  .footer_row{ grid-template-columns: 1fr; }
-  .footer_bottom{ justify-content: center; text-align: center; }
-}
-

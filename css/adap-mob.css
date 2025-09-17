@@ -118,3 +118,31 @@ input, select, textarea { font-size: 16px; } /* чтобы iOS не зумил *
   .footer_row{ grid-template-columns: 1fr; }
   .footer_bottom{ justify-content: center; text-align: center; }
 }
+
+/* === SAFETY NET for mobile (минимальные правки) === */
+@media (max-width: 768px){
+  /* карточки товаров: 2 колонки на планшете и уже */
+  .products-grid, .products_grid { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
+  .nav { overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .nav::-webkit-scrollbar { display: none; }
+  .search_input { width: 100% !important; font-size: 16px; }
+}
+
+@media (max-width: 480px){
+  html, body { overflow-x: hidden; }
+  /* всё «в столбик» и с нормальными отступами */
+  .info_row, .contact-grid, .filters { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .products-grid, .products_grid { grid-template-columns: 1fr !important; }
+  .filters .price { grid-template-columns: 1fr !important; }
+  /* кнопки/формы приятнее на тач-экране */
+  .btn, .button, .btn-dark, .btn-primary, .btn-secondary { width: 100%; min-height: 44px; }
+  /* изображения не вываливаются */
+  img, .modal__gallery img { max-width: 100%; height: auto; display: block; }
+  /* чуть компактнее шапка */
+  .header_row { gap: 10px; padding: 6px 0; }
+}
+
+/* iOS фикс высоты баннеров, если используешь vh */
+@supports (height: 100dvh){
+  .min-screen { min-height: 100dvh; }
+}

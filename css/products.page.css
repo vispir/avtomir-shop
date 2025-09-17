@@ -340,3 +340,32 @@ padding: 10px 12px; border: 1px solid #ddd; border-radius: 10px; outline: none;
 @media (max-width: 640px){
   .pg-btn{ width: 36px; height: 36px; font-size: 18px; }
 }
+
+/* ===== MOBILE FIX PACK (products.page.css) ===== */
+
+/* Фильтры: на мобилках в один столбец (перебиваем позднюю сетку 6fr/2fr/auto) */
+@media (max-width: 960px){
+  .filters { grid-template-columns: 1fr !important; }
+  .filters .filter-search,
+  .filters .volume,
+  .filters .price,
+  #resetFilters { grid-column: 1 / -1; width: 100%; }
+  .filters .price { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px){
+  .filters .price { grid-template-columns: 1fr; }
+}
+
+/* Грид карточек «Товары»: 2 → 1 колонка при узких */
+@media (max-width: 768px){
+  .products-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 480px){
+  .products-grid { grid-template-columns: 1fr; }
+}
+
+/* Модалка товара — пониже картинки на телефонах */
+@media (max-width: 768px){
+  .modal__body { grid-template-columns: 1fr; }
+  .modal__gallery img { height: 240px; }
+}

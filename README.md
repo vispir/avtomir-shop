@@ -35,32 +35,6 @@
 
 ---
 
-## 📁 Структура проекта
-avtomir-shop/
-├─ index.html
-├─ about.html
-├─ contact.html
-├─ products.html
-├─ cart.html
-├─ css/
-│ ├─ styles.css
-│ └─ base.css
-│ └─ cart.page.css
-│ └─ header-autocomplete.css
-│ └─ header-footer.css
-│ └─ products.page.css
-├─ js/
-│ ├─ products.page.js
-│ ├─ slider.js
-│ ├─ cart.js
-│ └─ search.js
-│ └─ cart.page.js
-├─ images/
-├─data/
-│ ├─products.data.js
-└─ README.md
-
----
 
 
 # Avtomir — an online store for car care products and accessories
@@ -90,33 +64,6 @@ I present a showcase website with product cards, a shopping cart/mini-cart, cata
 - **HTML5**, **CSS3** (Grid/Flex, glassmorphism), **Vanilla JS (ES6+)**
 - No frameworks or backend – a clean front end!!!
 - Static deployment to **GitHub Pages**
-
----
-
-## 📁 Project structure
-automir-shop/
-├─ index.html
-├─about.html
-├─ contact.html
-├─ products.html
-├─ cart.html
-├─ css/
-│ ├─ styles.css
-│ └─ base.css
-│ └─ cart.page.css
-│ └─ header-autocomplete.css
-│ └─ header-footer.css
-│ └─ products.page.css
-├─ js/
-│ ├─ products.page.js
-│ ├─ slider.js
-│ ├─ cart.js
-│ └─ search.js
-│ └─ cart.page.js
-├─ images/
-├─data/
-│ ├─products.data.js
-└─ README.md
 
 ---
 

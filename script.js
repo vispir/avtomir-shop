@@ -196,6 +196,7 @@ function initContactPage() {
     if (errors.length) {
       toast.textContent = errors.join(' · ');
       toast.style.background = 'rgba(255, 255, 255, 0.12)';
+      
       toast.style.border = '1px solid rgba(239,68,68,.35)';
       toast.style.color = '#ff0808ff';
       toast.classList.add('show');

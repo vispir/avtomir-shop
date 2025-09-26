@@ -45,7 +45,7 @@
       <article class="product-card" data-id="${p.id}">
         <div class="card-media">
           <img src="${p.image}" alt="${p.name}" loading="lazy">
-          <div class="media-cta">Посмотреть товар</div>
+          <div class="media-cta"></div>
         </div>
 
         <div class="card-meta">

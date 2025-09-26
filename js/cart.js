@@ -165,5 +165,6 @@ function notify(message, {type='success', timeout=2000} = {}){
 window.toast = notify;
 CART.notify = notify;
 
+
 })();
 

@@ -2,7 +2,7 @@
 .header .search { position: relative; } /* уже есть, но дублировать не страшно */
 
 .search-suggest {
-  position: absolute; left: 0; right: 0; top: 100%; margin-top: 8px;
+  position: absolute; right: -35px; top: 100%; margin-top: 8px;
   background: #fff; border: 1px solid #e5e7eb; border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0,0,0,.15); overflow: hidden; z-index: 5000;
   display: none; /* по умолчанию скрыто */
